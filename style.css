@@ -3,6 +3,11 @@
     src: url("ddin.otf") format("opentype");
 }
 
+:root {
+    --padding: 3rem;
+    --stroke-width: 4px;
+}
+
 body {
     /* Flex */
     display: flex;
@@ -12,13 +17,11 @@ body {
 
     /* Sizing */
     margin: 0;
-    width: 100vw;
     height: 100vh;
     box-sizing: border-box;
 
     /* Font */
     font-family: "D-Din", Arial, Helvetica, sans-serif;
-    font-size: 1vw;
 
     background-image: url("img/tilebg.png");
     overflow: hidden;
@@ -42,8 +45,8 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 2.5vw;
-    font-size: 3em;
+    margin: 1em;
+    font-size: var(--padding);
 }
 
 #socials a {
@@ -53,21 +56,22 @@ body {
 h1 {
     margin: 0;
     font-weight: 900;
-    font-size: 3em;
+    font-size: 5em;
     text-transform: uppercase;
 }
 
 h2 {
     margin: 0 0 1em;
     font-weight: normal;
-    font-size: 1.8em;
+    font-size: 3em;
 }
 
 #timeline {
     position: relative;
-    width: 95vw;
+    width: calc(100% - 2 * var(--padding));
     height: calc(100vh - 10vw);
     min-height: calc(100vh - 10vw);
+
     box-sizing: border-box;
     overflow-x: scroll;
 }
@@ -75,7 +79,6 @@ h2 {
 #timeline-inner {
     position: relative;
     margin: 0 auto;
-    width: 100%;
     height: 100%;
 }
 
@@ -92,7 +95,7 @@ h2 {
     bottom: 0;
     width: 100%;
     height: 60%;
-    border-top: 0.2vw solid black;
+    border-top: var(--stroke-width) solid black;
     overflow: hidden;
 }
 
@@ -130,8 +133,8 @@ h2 {
     position: absolute;
     bottom: 100%;
     left: 50%;
-    width: 0.2vw;
-    height: 100vw;
+    width: var(--stroke-width);
+    height: 100vh;
     background: black;
 }
 
@@ -148,17 +151,17 @@ h2 {
 
 .text.date1 > div {
     color: #800;
-    font-size: 0.9em;
+    font-size: 1.8em;
 }
 
 .text.date2 > div {
     color: #800;
-    font-size: 0.8em;
+    font-size: 1.6em;
 }
 
 .text.date3 > div {
     color: #800;
-    font-size: 0.7em;
+    font-size: 1.4em;
     line-height: 0.95em;
 }
 
@@ -172,17 +175,18 @@ h2 {
 .age {
     position: absolute;
     height: 100%;
-    border-left: 0.2vw solid black;
+    border-left: var(--stroke-width) solid black;
 }
 
 .age p {
     position: absolute;
     top: 0;
-    left: -0.2vw;
+    left: calc(-1 * var(--stroke-width));
     margin: 0;
     color: #800;
     background: white;
     font-weight: bold;
+    font-size: 2em;
 }
 
 .age .image {
@@ -205,7 +209,7 @@ h2 {
     /* Font */
     font-size: 2em;
     text-align: center;
-    text-shadow: 0 0.1vw 0.1vw black;
+    text-shadow: 0 2px 2px black;
     color: white;
 }
 
@@ -213,7 +217,7 @@ h2 {
     position: absolute;
     bottom: 0;
     left: 0;
-    margin: 2.5vw;
+    margin: var(--padding);
     font-size: 1.5em;
 }
 
@@ -221,7 +225,7 @@ h2 {
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 2.5vw;
+    margin: var(--padding);
     font-size: 1.5em;
 }
 
