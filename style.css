@@ -218,7 +218,7 @@ h2 {
     bottom: 0;
     left: 0;
     margin: var(--padding);
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 #footer2 {
@@ -226,7 +226,7 @@ h2 {
     bottom: 0;
     right: 0;
     margin: var(--padding);
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 #footer2 button {
@@ -243,10 +243,6 @@ h2 {
 
 #footer2 button:active {
     background: #aaa;
-}
-
-#footer > span {
-    font-size: 0.8em;
 }
 
 a {
