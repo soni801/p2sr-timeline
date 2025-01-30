@@ -54,14 +54,14 @@ body {
 }
 
 h1 {
-    margin: 0;
+    margin: 0 var(--padding) 0;
     font-weight: 900;
     font-size: clamp(1rem, 10vw, 5rem);
     text-transform: uppercase;
 }
 
 h2 {
-    margin: 0 0 1em;
+    margin: 0 var(--padding) 1em;
     font-weight: normal;
     font-size: clamp(1rem, 7vw, 3rem);
 }
@@ -261,6 +261,13 @@ a {
 /* Hide issue reporting text when space is tight, i cba making it look good so this is easier */
 @media (max-width: 1100px) {
     #footer {
+        display: none;
+    }
+}
+
+/* Change placement of footer buttons if there isn't enough height */
+@media (max-height: 900px) {
+    #footer2 {
         display: none;
     }
 }
