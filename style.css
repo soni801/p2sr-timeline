@@ -56,14 +56,14 @@ body {
 h1 {
     margin: 0;
     font-weight: 900;
-    font-size: 5em;
+    font-size: clamp(1rem, 10vw, 5rem);
     text-transform: uppercase;
 }
 
 h2 {
     margin: 0 0 1em;
     font-weight: normal;
-    font-size: 3em;
+    font-size: clamp(1rem, 7vw, 3rem);
 }
 
 #timeline {
@@ -229,6 +229,7 @@ h2 {
 
 #footer2 button {
     padding: 0.5em 1em;
+    margin-top: 0.5em; /* This will only have an effect when the screen is small and the buttons are pushed vertically */
     margin-left: 0.5em;
     border: 0;
     font: inherit;
@@ -245,4 +246,21 @@ h2 {
 
 a {
     color: inherit;
+}
+
+/* Responsive stuff */
+/* Eh just do this the easy way, designing mobile first is technically better but i really cannot be bothered */
+
+/* Hide GH and Discord icons when they get too close to the heading */
+@media (max-width: 1500px) {
+    #socials {
+        display: none;
+    }
+}
+
+/* Hide issue reporting text when space is tight, i cba making it look good so this is easier */
+@media (max-width: 1100px) {
+    #footer {
+        display: none;
+    }
 }
